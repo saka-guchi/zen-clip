@@ -21,7 +21,7 @@ ZenClip is **free to use with some functional limitations**. You can unlock the 
 ## ⚠️ Prerequisites (Required)
 
 To use this application, you must have the **Gemini CLI** installed and configured so that the `gemini` command is accessible from the Command Prompt (CMD). 
-*Please ensure the Gemini CLI setup and Gemini API key configuration are completed before use.*
+*Please before using it, make sure you have set up Gemini CLI.*
 
 ---
 
@@ -52,7 +52,7 @@ You can download the latest version from the **[Releases Page](https://github.co
 ### 2. Purchase Pro License
 To unlock all features, please purchase a license via Polar (Polar.sh).
 
-**[🛒 Purchase ZenClip Pro License on Polar](https://polar.sh/ZenSuite/products/...)**
+**[🛒 Purchase ZenClip Pro License on Polar](https://buy.polar.sh/polar_cl_O7UokiAgrxf6j1fNggb0X2cddHfaWymznBB1C3V8jBT)**
 
 *A license key will be issued immediately after purchase.*
 
