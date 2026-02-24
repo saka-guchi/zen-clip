@@ -21,7 +21,7 @@
 ## ⚠️ 前提条件 (必須)
 
 本アプリを利用するには、お使いのPCに **Gemini CLI** がインストールされており、コマンドプロンプト（CMD）から `gemini` コマンドが実行できる状態になっている必要があります。
-*事前にGemini CLIのセットアップと、Gemini APIキーの初期設定を完了させてからご利用ください。*
+*事前にGemini CLIのセットアップを完了させてからご利用ください。*
 
 ---
 
@@ -52,7 +52,7 @@
 ### 2. Pro版ライセンスの購入
 すべての機能を解放したい場合は、Polar（Polar.sh）よりライセンスをご購入ください。
 
-**[🛒 ZenClip Pro ライセンスを Polar で購入する](https://polar.sh/ZenSuite/products/...)**
+**[🛒 ZenClip Pro ライセンスを Polar で購入する](https://buy.polar.sh/polar_cl_O7UokiAgrxf6j1fNggb0X2cddHfaWymznBB1C3V8jBT)**
 
 *※購入後、ライセンスキーが発行されます。*
 
