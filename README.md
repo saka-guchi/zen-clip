@@ -1,88 +1,87 @@
-# ZenClip
+ [English](README.md) | [日本語](README.ja.md)
 
-[Modern software promotional banner for ZenClip]
+# ZenClip (v1.0.0)
 
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue.svg)]()
 [![Status](https://img.shields.io/badge/Status-Active-success.svg)]()
 [![License](https://img.shields.io/badge/License-Freemium-blue.svg)]()
-[![Download](https://img.shields.io/badge/Download-Latest%20Release-orange.svg)](https://github.com/saka-guchi/zen-clip/releases/latest)
+[![Download](https://img.shields.io/badge/Download-Latest%20Release-orange.svg)](https://github.com/saka-guchi/zen-clip-dev/releases/latest)
 
-[English](README.md) | [日本語](README.ja.md)
+**ZenClip** is an AI-powered clipboard manager that sits in your Windows system tray.
+It integrates with your local **Gemini CLI** or **GitHub Copilot CLI** to instantly process clipboard text with custom prompts, without interrupting your workflow.
 
-**ZenClip** is an AI-powered clipboard manager that resides in your Windows system tray. 
-By interfacing with the **Gemini CLI** installed on your local machine, it instantly processes clipboard text using custom prompts without interrupting your workflow.
+**Free-to-use (with limitations)**. You can unlock all features by purchasing a Pro license on Polar.
 
-ZenClip is **free to use with some functional limitations**. You can unlock the full potential by purchasing a "Pro License" on Polar.
-
-> **Note**: This repository is used for **Release Distribution** and **Issue Tracking** only. The source code is proprietary and closed-source.
+![Demo Video](assets/demo.gif)
 
 ---
 
-## ⚠️ Prerequisites (Required)
+## ⚠️ Prerequisites (Mandatory)
 
-To use this application, you must have the **Gemini CLI** installed and configured so that the `gemini` command is accessible from the Command Prompt (CMD). 
-*Please before using it, make sure you have set up Gemini CLI.*
+To use this application, you must have at least one (or both) of the following CLI tools installed and executable from your command line:
+
+1. **[Gemini CLI](https://geminicli.com/)**: `gemini` command must be executable.
+2. **[GitHub Copilot CLI](https://github.com/features/copilot/cli)**: `copilot` command must be executable.
+
+*Please ensure your CLI tools are fully set up before using ZenClip.*
 
 ---
 
 ## ✨ Key Features
 
-- **Instant AI Processing**: Simply copy text and press the global hotkey (default: `Ctrl + Shift + C`) to trigger AI processing in the background.
-- **Unobtrusive Design**: Runs quietly in the system tray. No bulky windows to manage.
-- **Custom Prompts**: Easily switch between different AI instructions via the tray icon's right-click menu.
-- **History Management**: Automatically saves AI responses. Review, copy, or batch-delete past results from the History window.
-- **Portable & Lightweight**: Runs as a single executable (`.exe`). No complex installation required.
-- **Multi-language Support**: UI available in English and Japanese, automatically matching your system language.
+- **Instant AI Processing**: Simply copy text and press a shortcut key (default: `Ctrl + Shift + C`), and the AI will process it in the background.
+- **Multi-Engine Support**: Choose between Gemini CLI and GitHub Copilot CLI as your engine.
+- **Unobtrusive Design**: Resides quietly in the system tray. A minimal OSD is displayed during processing, and a notification alerts you when finished.
+- **Custom Prompts**: Add and manage your own AI instructions (prompts) tailored to your needs.
+  ![Prompt Editor](assets/PromptWindow.png)
+- **History Management**: Automatically saves AI responses. View, reuse, or batch-delete past results from the history window.
+  ![History](assets/HistoryWindow.png)
+- **Multilingual Support**: The UI supports both English and Japanese (switches automatically based on OS settings).
 
-### 💎 Free vs. Pro Version
-You can use ZenClip for free, but the following limitations apply:
+### Icon States
+The system tray icon changes based on the application status:
 
-- **Free Version**: Limits on the number of saved history entries and custom prompts.
-- **Pro Version**: All limits are removed, granting full access to all features.
-
-
+| State | Icon | Description |
+| :--- | :--- | :--- |
+| **Idle** | ![Tray Idle](assets/TrayIcon_Idle.png) | Ready to process. |
+| **Processing** | ![Tray Processing](assets/TrayIcon_Processing.png) | AI is processing your request. |
+| **Error** | ![Tray Error](assets/TrayIcon_Error.png) | Processing failed. Check your CLI tool status. |
 
 ---
 
-## 📥 Download & Purchase
+## 💎 Free vs Pro Feature Comparison
 
-### 1. Download (Free)
-You can download the latest version from the **[Releases Page](https://github.com/saka-guchi/zen-clip/releases/latest)**. Try it out in your environment first!
+ZenClip can be used for free as the "Free Version" even without entering a license key.
 
-### 2. Purchase Pro License
-To unlock all features, please purchase a license via Polar (Polar.sh).
+| Category | Feature | Free Version | Pro Version (License) |
+| :--- | :--- | :--- | :--- |
+| **Limits** | Registered Prompts | Max 3 | **Unlimited** |
+| **Limits** | History Retention | Max 20 items | **Unlimited** |
+| **AI Models** | Model Specification | Fixed to Default | **Individually Selectable** |
 
+### Purchasing a Pro License
+To unlock all features, please purchase a license.
 **[🛒 Purchase ZenClip Pro License on Polar](https://buy.polar.sh/polar_cl_O7UokiAgrxf6j1fNggb0X2cddHfaWymznBB1C3V8jBT)**
 
-*A license key will be issued immediately after purchase.*
+*Note: This project has just launched and is still a work in progress. We would truly appreciate it if you could support its development with a donation-like purchase.*
 
 ---
 
-## 🚀 Getting Started
+## 🚀 How to Use
 
 ### 1. Installation
-1. Go to the **[Latest Release Page](https://github.com/saka-guchi/zen-clip/releases/latest)**.
-2. Download `ZenClip-vX.Y.Z-win-x64.zip`.
-3. Extract the ZIP file to any folder.
-4. Double-click `ZenClip.exe` to launch.
+1. Download the ZIP file from the **[latest release page](https://github.com/saka-guchi/zen-clip/releases/latest)**.
+2. Extract it to any folder and run `ZenClip.exe`.
 
-### 2. Activation & Setup
-1. Open the **Settings** window and enter your **License Key** obtained from Polar to activate the Pro version (you can leave it blank to continue using the Free version).
-2. Customize your prompts and global hotkey as desired.
-3. (Optional) If you want the AI results to overwrite your clipboard directly, enable "Auto-copy" in the settings (disabled by default).
-
----
-
-## 💬 Support & Bug Reports
-
-If you encounter any issues, have feature requests, or need help, please use the GitHub Issues page.
-
-- [🐛 Report a Bug](../../issues/new)
-- [💡 Request a Feature](../../issues/new)
+### 2. Processing Text
+1. **Select and copy** the text you want to process.
+2. Press the shortcut **`<Ctrl> + <Shift> + C`**. <br/>
+  ![OSD](assets/ProcessingOsdWindow.png)
+3. **AI processing starts immediately**, and the results are automatically copied to your clipboard (can be changed in settings). <br/>
+  ![Toast](assets/ToastWindow.png)
 
 ---
 
 ## 📄 License
-
-This software is a proprietary, closed-source product. All rights reserved. 
-Redistribution, modification, or reverse engineering of the compiled executable, whether in the Free or Pro version, is strictly prohibited.
+Copyright © 2026 Zen-Do Development. All rights reserved.
+While this software is not closed-source, please follow the license terms for redistribution or modification of the executable.
