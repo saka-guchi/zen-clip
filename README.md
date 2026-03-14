@@ -1,6 +1,6 @@
  [English](README.md) | [日本語](README.ja.md)
 
-# ZenClip (v1.0.0)
+# ZenClip
 
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue.svg)]()
 [![Status](https://img.shields.io/badge/Status-Active-success.svg)]()
