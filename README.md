@@ -1,4 +1,4 @@
- [English](README.md) | [日本語](README.ja.md)
+[English](README.md) | [日本語](README.ja.md)
 
 # ZenClip
 
@@ -30,6 +30,8 @@ To use this application, you must have at least one (or both) of the following C
 ## ✨ Key Features
 
 - **Instant AI Processing**: Simply copy text and press a shortcut key (default: `Ctrl + Shift + C`), and the AI will process it in the background.
+- **Prompt Window**: Press `Ctrl + Shift + P` to open a small window where you can select a saved prompt or type text directly, then press `Enter` to start processing. Perfect for when you want to send text that's in your head — before you've even copied anything.
+  ![QuickInputWindow](assets/QuickInputWindow.png)
 - **Multi-Engine Support**: Choose between Gemini CLI and GitHub Copilot CLI as your engine.
 - **Unobtrusive Design**: Resides quietly in the system tray. A minimal OSD is displayed during processing, and a notification alerts you when finished.
 - **Custom Prompts**: Add and manage your own AI instructions (prompts) tailored to your needs.
@@ -37,6 +39,13 @@ To use this application, you must have at least one (or both) of the following C
 - **History Management**: Automatically saves AI responses. View, reuse, or batch-delete past results from the history window.
   ![History](assets/HistoryWindow.png)
 - **Multilingual Support**: The UI supports both English and Japanese (switches automatically based on OS settings).
+
+### Keyboard Shortcuts
+
+| Shortcut | Action |
+| :--- | :--- |
+| `Ctrl + Shift + C` | Process copied clipboard text with AI |
+| `Ctrl + Shift + P` | Open the prompt window for direct input |
 
 ### Icon States
 The system tray icon changes based on the application status:
@@ -73,12 +82,17 @@ To unlock all features, please purchase a license.
 1. Download the ZIP file from the **[latest release page](https://github.com/saka-guchi/zen-clip/releases/latest)**.
 2. Extract it to any folder and run `ZenClip.exe`.
 
-### 2. Processing Text
+### 2. Processing Clipboard Text
 1. **Select and copy** the text you want to process.
-2. Press the shortcut **`<Ctrl> + <Shift> + C`**. <br/>
+2. Press the shortcut **`Ctrl + Shift + C`**.<br/>
   ![OSD](assets/ProcessingOsdWindow.png)
-3. **AI processing starts immediately**, and the results are automatically copied to your clipboard (can be changed in settings). <br/>
+3. **AI processing starts immediately**, and the results are automatically copied to your clipboard (can be changed in settings).<br/>
   ![Toast](assets/ToastWindow.png)
+
+### 3. Using the Prompt Window
+1. Press **`Ctrl + Shift + P`** to open the prompt window.
+2. Select a prompt from the list or type directly into the text box.
+3. Press **`Enter`** to start processing — results will be delivered to your clipboard.
 
 ---
 

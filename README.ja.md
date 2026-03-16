@@ -1,6 +1,6 @@
 [English](README.md) | [日本語](README.ja.md)
 
-# ZenClip (v1.0.0)
+# ZenClip
 
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue.svg)]()
 [![Status](https://img.shields.io/badge/Status-Active-success.svg)]()
@@ -30,14 +30,22 @@
 ## ✨ 主な機能
 
 - **瞬時のAI処理**: テキストをコピーしてショートカットキー（デフォルト: `Ctrl + Shift + C`）を押すだけで、AIがバックグラウンドで処理を実行します。
+- **プロンプトウィンドウ**: `Ctrl + Shift + P` でウィンドウを開き、プロンプトをリストから選ぶか、テキストをその場で直接入力して `Enter` キーで処理を実行します。まだコピーしていない、頭の中にある文章をそのままAIに渡したいときに便利です。
+  ![QuickInputWindow](assets/QuickInputWindow.ja.png)
 - **マルチエンジン対応**: Gemini CLI だけでなく、GitHub Copilot CLI もエンジンとして選択可能です。
 - **邪魔にならない設計**: タスクトレイに静かに常駐。処理中は極小のOSDが表示され、完了は通知でお知らせします。
 - **カスタムプロンプト**: 用途に合わせたAIへの指示（プロンプト）を自由に追加・管理できます。
   ![Prompt Editor](assets/PromptWindow.ja.png)
 - **履歴管理**: AIの応答を自動保存。履歴ウィンドウから過去の結果を確認・再利用したり、複数選択して一括削除することが可能です。
-
   ![History](assets/HistoryWindow.ja.png)
 - **多言語対応**: UIは英語と日本語に対応（OSの言語設定に合わせて自動で切り替わります）。
+
+### ショートカットキー一覧
+
+| ショートカット | 動作 |
+| :--- | :--- |
+| `Ctrl + Shift + C` | コピーしたテキストをそのままAI処理 |
+| `Ctrl + Shift + P` | プロンプトウィンドウを開いて直接入力 |
 
 ### アイコンの状態
 タスクトレイのアイコンは、ステータスに応じて以下のように変化します。
@@ -74,12 +82,17 @@
 1. **[最新のリリースページ](https://github.com/saka-guchi/zen-clip/releases/latest)** から ZIPファイルをダウンロードします。
 2. 任意のフォルダに展開し、`ZenClip.exe` を起動します。
 
-### 2. テキストの処理
+### 2. クリップボードのテキストを処理する
 1. 処理したいテキストを**選択してコピー**します。
-2. ショートカット **`<Ctrl> + <Shift> + C`** を押します。<br/>
+2. ショートカット **`Ctrl + Shift + C`** を押します。<br/>
   ![OSD](assets/ProcessingOsdWindow.ja.png)
 3. **即座にAI処理が開始**され、結果は自動的にクリップボードにコピーされます（設定で変更可能）。<br/>
   ![Toast](assets/ToastWindow.ja.png)
+
+### 3. プロンプトウィンドウから直接入力する
+1. ショートカット **`Ctrl + Shift + P`** を押してウィンドウを開きます。
+2. プロンプトをリストから選ぶか、テキストボックスに直接入力します。
+3. **`Enter`** キーを押すと処理が開始され、結果はクリップボードに届きます。
 
 ---
 
