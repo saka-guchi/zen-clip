@@ -5,10 +5,10 @@
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-blue.svg)]()
 [![Status](https://img.shields.io/badge/Status-Active-success.svg)]()
 [![License](https://img.shields.io/badge/License-Freemium-blue.svg)]()
-[![Download](https://img.shields.io/badge/Download-Latest%20Release-orange.svg)](https://github.com/saka-guchi/zen-clip-dev/releases/latest)
+[![Download](https://img.shields.io/badge/Download-Latest%20Release-orange.svg)](https://github.com/saka-guchi/zen-clip/releases/latest)
 
 **ZenClip** is an AI-powered clipboard manager that sits in your Windows system tray.
-It integrates with your local **Gemini CLI** or **GitHub Copilot CLI** to instantly process clipboard text with custom prompts, without interrupting your workflow.
+It integrates with your local **Gemini CLI**, **GitHub Copilot CLI**, or **Antigravity CLI** to instantly process clipboard text with custom prompts, without interrupting your workflow.
 
 **Free-to-use (with limitations)**. You can unlock all features by purchasing a Pro license on Polar.
 
@@ -18,10 +18,11 @@ It integrates with your local **Gemini CLI** or **GitHub Copilot CLI** to instan
 
 ## ⚠️ Prerequisites (Mandatory)
 
-To use this application, you must have at least one (or both) of the following CLI tools installed and executable from your command line:
+To use this application, you must have at least one of the following CLI tools installed and executable from your command line:
 
 1. **[Gemini CLI](https://geminicli.com/)**: `gemini` command must be executable.
 2. **[GitHub Copilot CLI](https://github.com/features/copilot/cli)**: `copilot` command must be executable.
+3. **[Antigravity CLI](https://github.com/anthropics/antigravity)**: `agy` command must be executable.
 
 *Please ensure your CLI tools are fully set up before using ZenClip.*
 
@@ -32,12 +33,14 @@ To use this application, you must have at least one (or both) of the following C
 - **Instant AI Processing**: Simply copy text and press a shortcut key (default: `Ctrl + Shift + C`), and the AI will process it in the background.
 - **Prompt Window**: Press `Ctrl + Shift + P` to open a small window where you can select a saved prompt or type text directly, then press `Enter` to start processing. Perfect for when you want to send text that's in your head — before you've even copied anything.
   ![QuickInputWindow](assets/QuickInputWindow.png)
-- **Multi-Engine Support**: Choose between Gemini CLI and GitHub Copilot CLI as your engine.
+- **Prompt Chains**: Chain multiple prompts together to execute sequentially. The AI output from the previous step is automatically passed as input to the next step, enabling complex multi-step transformations.
+- **Multi-Engine Support**: Choose between Gemini CLI, GitHub Copilot CLI, and Antigravity CLI as your engine.
 - **Unobtrusive Design**: Resides quietly in the system tray. A minimal OSD is displayed during processing, and a notification alerts you when finished.
-- **Custom Prompts**: Add and manage your own AI instructions (prompts) tailored to your needs.
+- **Custom Prompts**: Add and manage your own AI instructions (prompts) tailored to your needs. Supports import/export.
   ![Prompt Editor](assets/PromptWindow.png)
-- **History Management**: Automatically saves AI responses. View, reuse, or batch-delete past results from the history window.
+- **History Management**: Automatically saves AI responses. View, reuse, or batch-delete past results from the history window. Supports keyword search and status filtering.
   ![History](assets/HistoryWindow.png)
+- **Auto Update**: Automatically detects new versions and updates with a single click.
 - **Multilingual Support**: The UI supports both English and Japanese (switches automatically based on OS settings).
 
 ### Keyboard Shortcuts
@@ -48,6 +51,7 @@ To use this application, you must have at least one (or both) of the following C
 | `Ctrl + Shift + P` | Open the prompt window for direct input |
 
 ### Icon States
+
 The system tray icon changes based on the application status:
 
 | State | Icon | Description |
@@ -66,9 +70,11 @@ ZenClip can be used for free as the "Free Version" even without entering a licen
 | :--- | :--- | :--- | :--- |
 | **Limits** | Registered Prompts | Max 3 | **Unlimited** |
 | **Limits** | History Retention | Max 20 items | **Unlimited** |
+| **Limits** | Prompt Chains | Max 1 | **Unlimited** |
 | **AI Models** | Model Specification | Fixed to Default | **Individually Selectable** |
 
 ### Purchasing a Pro License
+
 To unlock all features, please purchase a license.
 **[🛒 Purchase ZenClip Pro License on Polar](https://buy.polar.sh/polar_cl_uYQimxvpseP80yopub0uTZO2tXZqXDseLS68r0TCXBv)**
 
@@ -79,10 +85,12 @@ To unlock all features, please purchase a license.
 ## 🚀 How to Use
 
 ### 1. Installation
+
 1. Download the ZIP file from the **[latest release page](https://github.com/saka-guchi/zen-clip/releases/latest)**.
 2. Extract it to any folder and run `ZenClip.exe`.
 
 ### 2. Processing Clipboard Text
+
 1. **Select and copy** the text you want to process.
 2. Press the shortcut **`Ctrl + Shift + C`**.<br/>
   ![OSD](assets/ProcessingOsdWindow.png)
@@ -90,12 +98,36 @@ To unlock all features, please purchase a license.
   ![Toast](assets/ToastWindow.png)
 
 ### 3. Using the Prompt Window
+
 1. Press **`Ctrl + Shift + P`** to open the prompt window.
 2. Select a prompt from the list or type directly into the text box.
 3. Press **`Enter`** to start processing — results will be delivered to your clipboard.
 
+### 4. Using Prompt Chains
+
+1. In the **Prompt Editor**, create a chain with multiple prompts registered as steps.
+2. Select the chain from the dropdown in the Prompt Window (`Ctrl + Shift + P`).
+3. Enter text and press `Enter` — the AI will process sequentially in the defined order.
+
+---
+
+## ⚙️ Settings
+
+You can access settings from the system tray icon (right-click → Settings).
+
+| Setting | Description |
+| :--- | :--- |
+| **Shortcut Keys** | Customize hotkeys for clipboard processing and prompt window |
+| **AI Processing Interrupt** | Choose between **Execute Latest** (cancel current and restart) or **Execute in Order** (queue) when hotkey pressed during processing |
+| **AI Engine** | Select `Gemini`, `GitHub Copilot`, or `Antigravity` |
+| **Model Selection** | Specify AI model individually (Pro only) |
+| **Auto Copy** | Whether to automatically copy AI response to clipboard |
+| **Startup** | Whether to auto-start on Windows startup |
+| **Notification Duration** | Time (seconds) before toast notification auto-closes. 0 = never auto-close |
+
 ---
 
 ## 📄 License
+
 Copyright © 2026 Zen-Do Development. All rights reserved.
 While this software is not closed-source, please follow the license terms for redistribution or modification of the executable.
